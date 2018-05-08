@@ -15,11 +15,11 @@ import static java.util.stream.Collectors.toList;
 public class Stream8 {
 
     public static List<Integer> returnSquareRoot(List<Integer> numbers){
-        throw new NotImplementedException();
+        return numbers.stream().map(Math::sqrt).map(Double::intValue).collect(toList());
     }
 
-    public static List<Integer> getAgeFromUsers(List<User> user){
-        throw new NotImplementedException();
+    public static List<Integer> getAgeFromUsers(List<User> users){
+        return users.stream().map(User::getAge).collect(toList());
     }
 
     public static List<Integer> getDistinctAges(List<User> users){
