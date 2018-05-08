@@ -11,5 +11,6 @@ public class TransactionLambda implements Runnable{
     @Override
     public void run() {
         consumed = true;
+        System.out.println("Running the transaction");
     }
 }

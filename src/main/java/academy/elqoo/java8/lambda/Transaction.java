@@ -1,15 +1,14 @@
 package academy.elqoo.java8.lambda;
 
 
-public class Transaction {
+class Transaction {
 
-    public void start() {
-
+    void start() {
+        System.out.println("Start the transaction");
     }
 
-    public void stop() {
-
-
+    void stop() {
+        System.out.println("End the transaction");
     }
 
 }
