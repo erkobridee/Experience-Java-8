@@ -10,6 +10,8 @@ import java.util.Optional;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.toList;
+
 public class Stream8 {
 
     public static List<Integer> returnSquareRoot(List<Integer> numbers){
@@ -33,7 +35,7 @@ public class Stream8 {
     }
 
     public static List<String> mapToUpperCase(List<String> strings){
-        throw new NotImplementedException();
+        return strings.stream().map(String::toUpperCase).collect(toList());
     }
 
     public static Integer sum(List<Integer> integers){
