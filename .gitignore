@@ -3,3 +3,5 @@
 # intellyj idea
 .idea
 
+# compiled output
+target/
