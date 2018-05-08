@@ -8,7 +8,6 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -30,10 +29,6 @@ public class LambdaTest {
     @Test
     public void shouldBeExecutedWitingATransaction(){
         TransactionLambda lambda = new TransactionLambda();
-//        Lambda.processWithinTransaction(() -> {
-//            System.out.println("Hello");
-//            lambda.run();
-//        });
         Lambda.processWithinTransaction(lambda);
         assertTrue(lambda.isConsumed());
     }
@@ -41,7 +36,6 @@ public class LambdaTest {
     @Test
     public void shouldCreateAString(){
         String bigString = Lambda.create(() -> "Hello");
-        System.out.println(bigString);
         assertTrue(bigString.length()>0);
     }
 
@@ -49,7 +43,6 @@ public class LambdaTest {
     public void extractStringSize(){
         String myString = "This is great";
         int length = Lambda.getStringLength(myString, String::length);
-//        assertTrue(length==13);
         assertEquals(length, 13);
     }
 
@@ -58,7 +51,6 @@ public class LambdaTest {
         int a = 5;
         int b = 6;
         int result = Lambda.multiply(a, b, (inta, intb) -> inta * intb);
-//        assertTrue(result==30);
         assertEquals(result, 30);
     }
 
