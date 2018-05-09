@@ -14,7 +14,6 @@ import static org.hamcrest.collection.IsIterableContainingInOrder.contains;
 import static org.junit.Assert.*;
 
 public class StreamTest {
-    // hello
 
     @Test
     public void shouldMapStringsToUpperCase() {
