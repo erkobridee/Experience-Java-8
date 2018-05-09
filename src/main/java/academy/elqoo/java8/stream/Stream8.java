@@ -86,7 +86,7 @@ public class Stream8 {
     }
 
     public static boolean anyMatch(List<User> users, int age){
-        throw new NotImplementedException();
+        return users.stream().anyMatch(user -> user.getAge().equals(age));
     }
 
     public static boolean noneMatch(List<User> users, int age){
