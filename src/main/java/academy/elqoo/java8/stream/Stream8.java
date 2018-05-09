@@ -98,7 +98,8 @@ public class Stream8 {
     }
 
     public static List<User> sortByAge(List<User> users){
-        throw new NotImplementedException();
+        users.sort(Comparator.comparing(User::getAge));
+        return users;
     }
 
     public static Stream<Integer> getBoxedStream(IntStream stream){
