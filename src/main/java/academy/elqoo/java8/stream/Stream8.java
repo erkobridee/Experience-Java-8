@@ -3,10 +3,7 @@ package academy.elqoo.java8.stream;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.util.IntSummaryStatistics;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -51,7 +48,7 @@ public class Stream8 {
     }
 
     public static List<String> getDistinctLetters(List<String> names){
-        throw new NotImplementedException();
+        return names.stream().map(s -> s.split("")).flatMap(Arrays::stream).distinct().collect(toList());
     }
 
 
