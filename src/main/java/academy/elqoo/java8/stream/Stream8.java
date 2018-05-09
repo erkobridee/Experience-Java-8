@@ -94,7 +94,7 @@ public class Stream8 {
     }
 
     public static Optional<User> findAny(List<User> users, String name){
-        throw new NotImplementedException();
+        return users.stream().filter(user -> user.getName().equals(name)).findAny();
     }
 
     public static List<User> sortByAge(List<User> users){
