@@ -119,7 +119,7 @@ public class Stream8 {
     }
 
     public static List<Integer> generateFirst10PrimeNumbers(){
-        throw new NotImplementedException();
+        return Stream.iterate(2, integer -> integer+1).filter(Stream8::isPrime).limit(10).collect(toList());
     }
 
     public static boolean isPrime(int number) {
