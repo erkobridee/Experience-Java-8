@@ -66,7 +66,7 @@ public class Stream8 {
     }
 
     public static Integer getMaxAge(List<User> users){
-        throw new NotImplementedException();
+        return users.stream().mapToInt(User::getAge).max().orElse(-1);
     }
 
     public static Integer getMinAge(List<User> users) {
