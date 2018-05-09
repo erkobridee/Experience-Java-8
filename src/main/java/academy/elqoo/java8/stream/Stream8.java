@@ -73,7 +73,9 @@ public class Stream8 {
 //        User user = users.stream().min(Comparator.comparing(User::getAge)).orElse(new User(-1));
 //        return user.getAge();
 
-        return users.stream().map(User::getAge).min(Comparator.comparing(age -> age)).orElse(-1);
+//        return users.stream().map(User::getAge).min(Comparator.comparing(age -> age)).orElse(-1);
+
+        return users.stream().map(User::getAge).min(Comparator.comparing(Function.identity())).orElse(-1);
     }
 
     public static Map<Boolean, List<User>> partionUsersByGender(List<User> users){
