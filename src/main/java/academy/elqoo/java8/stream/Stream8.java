@@ -5,6 +5,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.*;
 import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -126,7 +127,16 @@ public class Stream8 {
     }
 
     public static List<Integer> generate10RandomNumbers(){
-        throw new NotImplementedException();
+//        Supplier<Integer> randomInt = () -> {
+//            Random random = new Random();
+//            return random.nextInt();
+//        };
+//        return Stream.generate(randomInt).limit(10).collect(toList());
+
+        return Stream.generate(() -> {
+            Random random = new Random();
+            return random.nextInt();
+        }).limit(10).collect(toList());
     }
 
     public static User findOldest(List<User> users){
