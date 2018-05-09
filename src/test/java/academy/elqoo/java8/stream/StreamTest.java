@@ -249,6 +249,7 @@ public class StreamTest {
     @Test
     public void shouldGenerate10RandomNumbers(){
         List<Integer> randomNumbers = Stream8.generate10RandomNumbers();
+//        randomNumbers.stream().forEach(System.out::println);
         assertTrue(randomNumbers.size()==10);
     }
 
