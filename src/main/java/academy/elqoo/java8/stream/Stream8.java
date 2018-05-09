@@ -130,7 +130,7 @@ public class Stream8 {
     }
 
     public static IntSummaryStatistics ageSummaryStatistics(List<User> users){
-        throw new NotImplementedException();
+        return users.stream().mapToInt(User::getAge).summaryStatistics();
     }
 
 }
