@@ -37,7 +37,8 @@ public class Stream8 {
     }
 
     public static Integer sum(List<Integer> integers){
-        return integers.stream().mapToInt(value -> value).sum();
+//        return integers.stream().mapToInt(value -> value).sum();
+        return integers.stream().reduce(0, (a, b) -> a+b);
     }
 
     public static List<Integer> skip(List<Integer> integers, Integer toSkip){
