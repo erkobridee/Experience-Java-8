@@ -19,7 +19,7 @@ public class OptionalTest {
     @Test
     public void shouldReturnBookName(){
         Optional<Book> book = Optional8.getBook();
-        String bookName = null; // book. ....
+        String bookName = book.map(Book::getName).orElse("default"); // book. ....
         assertThat(bookName,equalTo("Experience Java 8"));
     }
 
