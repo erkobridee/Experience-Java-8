@@ -33,7 +33,6 @@ public class OptionalTest {
     @Test(expected = NoSuchElementException.class)
     public void shouldThrowNoElementException(){
         Optional<Book> book = Optional.ofNullable(null);
-//        Optional<Book> book = Optional8.getBook();
         book.get().getAuthor();
     }
 
