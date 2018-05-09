@@ -93,7 +93,7 @@ public class Stream8 {
     }
 
     public static Map<Boolean, Long> countGender(List<User> users){
-        throw new NotImplementedException();
+        return users.stream().collect(groupingBy(User::isMale, counting()));
     }
 
     public static boolean anyMatch(List<User> users, int age){
