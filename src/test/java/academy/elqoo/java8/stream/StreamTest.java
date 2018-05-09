@@ -231,7 +231,8 @@ public class StreamTest {
         List<Integer> numbers = asList(1, 2, 3);
         IntStream intStream = numbers.stream().mapToInt(value -> value);
         Stream<Integer> boxedStream = Stream8.getBoxedStream(intStream);
-        assertTrue(boxedStream.count() == 3);
+//        assertTrue(boxedStream.count() == 3);
+        assertEquals(boxedStream.count(), 3);
     }
 
     @Test
