@@ -28,7 +28,8 @@ public class Stream8 {
     }
 
     public static Integer countUsersOlderThen25(List<User> users){
-        return users.stream().filter(u -> u.getAge()>25).mapToInt(u -> 1).sum();
+        long count = users.stream().map(User::getAge).filter(age -> age > 25).count();
+        return new Long(count).intValue();
     }
 
     public static List<String> mapToUpperCase(List<String> strings){
