@@ -89,7 +89,7 @@ public class Stream8 {
     }
 
     public static Map<Boolean, Map<Integer, List<User>>> groupByGenderAndAge(List<User> users){
-        throw new NotImplementedException();
+        return users.stream().collect(groupingBy(User::isMale, groupingBy(User::getAge)));
     }
 
     public static Map<Boolean, Long> countGender(List<User> users){
