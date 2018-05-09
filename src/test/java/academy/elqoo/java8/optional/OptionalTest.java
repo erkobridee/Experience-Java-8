@@ -12,7 +12,7 @@ public class OptionalTest {
 
     @Test
     public void shouldCreateEmptyOptional(){
-        Optional<String> optional = null; // create empty optional
+        Optional<String> optional = Optional.empty(); // create empty optional
         assertThat(optional.isPresent(),equalTo(false));
     }
 
