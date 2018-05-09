@@ -251,7 +251,8 @@ public class StreamTest {
     public void shouldGenerate10RandomNumbers(){
         List<Integer> randomNumbers = Stream8.generate10RandomNumbers();
 //        randomNumbers.stream().forEach(System.out::println);
-        assertTrue(randomNumbers.size()==10);
+//        assertTrue(randomNumbers.size()==10);
+        assertEquals(randomNumbers.size(), 10);
     }
 
     @Test
