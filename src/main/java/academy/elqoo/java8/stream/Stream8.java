@@ -4,6 +4,7 @@ package academy.elqoo.java8.stream;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -69,8 +70,10 @@ public class Stream8 {
     }
 
     public static Integer getMinAge(List<User> users) {
-        User user = users.stream().min(Comparator.comparing(User::getAge)).orElse(new User(-1));
-        return user.getAge();
+//        User user = users.stream().min(Comparator.comparing(User::getAge)).orElse(new User(-1));
+//        return user.getAge();
+
+        return users.stream().map(User::getAge).min(Comparator.comparing(age -> age)).orElse(-1);
     }
 
     public static Map<Boolean, List<User>> partionUsersByGender(List<User> users){
