@@ -37,7 +37,7 @@ public class Stream8 {
     }
 
     public static Integer sum(List<Integer> integers){
-        throw new NotImplementedException();
+        return integers.stream().mapToInt(value -> value).sum();
     }
 
     public static List<Integer> skip(List<Integer> integers, Integer toSkip){
