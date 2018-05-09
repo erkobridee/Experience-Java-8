@@ -9,9 +9,7 @@ import java.util.function.Supplier;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.partitioningBy;
-import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.*;
 
 public class Stream8 {
 
@@ -87,7 +85,7 @@ public class Stream8 {
     }
 
     public static Map<Integer, List<User>> groupByAge(List<User> users){
-        throw new NotImplementedException();
+        return users.stream().collect(groupingBy(User::getAge));
     }
 
     public static Map<Boolean, Map<Integer, List<User>>> groupByGenderAndAge(List<User> users){
