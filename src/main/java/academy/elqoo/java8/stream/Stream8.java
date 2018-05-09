@@ -62,7 +62,7 @@ public class Stream8 {
     }
 
     public static double getAverageAge(List<User> users){
-        throw new NotImplementedException();
+        return users.stream().mapToInt(User::getAge).average().orElse(-1);
     }
 
     public static Integer getMaxAge(List<User> users){

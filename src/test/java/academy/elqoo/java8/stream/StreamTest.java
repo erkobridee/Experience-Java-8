@@ -102,7 +102,7 @@ public class StreamTest {
         List<User> users = User.getUsersWithAge(10, 20, 30);
         assertThat(Stream8.getMinAge(users), equalTo(10));
         assertThat(Stream8.getMaxAge(users), equalTo(30));
-//        assertThat(Stream8.getAverageAge(users), equalTo((double)(10+20+30)/3));
+        assertThat(Stream8.getAverageAge(users), equalTo((double)(10+20+30)/3));
     }
 
     @Test
