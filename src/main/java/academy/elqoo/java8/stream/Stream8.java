@@ -69,7 +69,8 @@ public class Stream8 {
     }
 
     public static Integer getMinAge(List<User> users) {
-        throw new NotImplementedException();
+        User user = users.stream().min(Comparator.comparing(User::getAge)).orElse(new User(-1));
+        return user.getAge();
     }
 
     public static Map<Boolean, List<User>> partionUsersByGender(List<User> users){
