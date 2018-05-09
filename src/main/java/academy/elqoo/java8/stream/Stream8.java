@@ -20,7 +20,7 @@ public class Stream8 {
     }
 
     public static List<Integer> getDistinctAges(List<User> users){
-        throw new NotImplementedException();
+        return users.stream().map(User::getAge).distinct().collect(toList());
     }
 
     public static List<User> getLimitedUserList(List<User> users, int limit){
