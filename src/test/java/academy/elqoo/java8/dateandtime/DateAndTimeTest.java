@@ -107,8 +107,8 @@ public class DateAndTimeTest {
 
     @Test
     public void shouldCheckIfDurationIsZero(){
-        Duration duration = null; // create a duration of 5 days
-        boolean isZero = true; // check for the duration if it's zero
+        Duration duration = Duration.of(5, ChronoUnit.DAYS);
+        boolean isZero = duration.isZero(); // check for the duration if it's zero
         assertThat(false, equalTo(isZero));
     }
 
