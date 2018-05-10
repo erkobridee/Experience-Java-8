@@ -1,5 +1,7 @@
 package academy.elqoo.java8.defaultmethods;
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 import java.util.Collection;
 
 public interface Shape {
@@ -19,6 +21,10 @@ public interface Shape {
     default void move(int x, int y) {
         setXPos(x);
         setYPos(y);
+    }
+
+    default void doSomething(){
+        throw new NotImplementedException();
     }
 
     static void moveXPosWith10(Collection<Shape> shapes) {
