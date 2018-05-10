@@ -14,5 +14,9 @@ public interface Shape {
         return "";
     }
 
+    default void move(int x, int y) {
+        setXPos(x);
+        setYPos(y);
+    }
 
 }

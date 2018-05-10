@@ -15,7 +15,7 @@ public class DefaultMethodsTest {
     public void shouldMoveShape(){
         Shape shape = new Rectangle();
         // implement a default move method without changing the Rectangle class
-        // shape.move(10,10);
+        shape.move(10,10);
         assertThat(10, equalTo(shape.getXPos()));
         assertThat(10, equalTo(shape.getYPos()));
     }
