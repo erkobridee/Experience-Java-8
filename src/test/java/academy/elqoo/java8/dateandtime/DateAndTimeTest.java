@@ -5,7 +5,9 @@ import org.junit.Test;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalField;
 
 import static java.time.Month.JANUARY;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -36,9 +38,9 @@ public class DateAndTimeTest {
     @Test
     public void shouldRetrieveDateInformationUsingChronoFields(){
         LocalDate newYearsEve = DateTime8.createNewYearsEve2017();
-        int year = newYearsEve.getYear(); // replace this by getting the year using chrono fields interface
-        int month = newYearsEve.getMonthValue();
-        int day = newYearsEve.getDayOfMonth();
+        int year = newYearsEve.get(ChronoField.YEAR);
+        int month = newYearsEve.get(ChronoField.MONTH_OF_YEAR);
+        int day = newYearsEve.get(ChronoField.DAY_OF_MONTH);
         assertThat(year, is(equalTo(newYearsEve.getYear())));
         assertThat(month, is(equalTo(12)));
         assertThat(day, is(equalTo(newYearsEve.getDayOfMonth())));
