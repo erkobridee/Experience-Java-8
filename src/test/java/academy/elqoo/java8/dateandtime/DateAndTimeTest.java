@@ -18,7 +18,7 @@ public class DateAndTimeTest {
 
     @Test
     public void shouldCreateNewDate(){
-        LocalDate newYearsEve = LocalDate.of(2017, 12, 31); // create new years eve 2017 using the localdate static factory methods
+        LocalDate newYearsEve = LocalDate.of(2017, Month.DECEMBER, 31); // create new years eve 2017 using the localdate static factory methods
         assertThat(newYearsEve.getYear(), is(equalTo(2017)));
         assertThat(newYearsEve.getMonth(), is(equalTo(Month.DECEMBER)));
         assertThat(newYearsEve.getDayOfMonth(), is(equalTo(31)));
