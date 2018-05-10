@@ -36,9 +36,9 @@ public class DateAndTimeTest {
     @Test
     public void shouldRetrieveDateInformationUsingChronoFields(){
         LocalDate newYearsEve = DateTime8.createNewYearsEve2017();
-        int year = 0; // replace this by getting the year using chrono fields interface
-        int month =0;
-        int day = 0;
+        int year = newYearsEve.getYear(); // replace this by getting the year using chrono fields interface
+        int month = newYearsEve.getMonthValue();
+        int day = newYearsEve.getDayOfMonth();
         assertThat(year, is(equalTo(newYearsEve.getYear())));
         assertThat(month, is(equalTo(12)));
         assertThat(day, is(equalTo(newYearsEve.getDayOfMonth())));
