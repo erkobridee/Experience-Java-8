@@ -73,7 +73,7 @@ public class DateAndTimeTest {
 
     @Test
     public void shouldCreateLocalDateTimeNewYearsEve(){
-        LocalDateTime newYearsEve = null; // create LocalDateTime for new years eve at midnight
+        LocalDateTime newYearsEve = LocalDateTime.of(2017, Month.DECEMBER, 31, 0, 0, 0);
         assertThat(newYearsEve.getYear(), is(equalTo(2017)));
         assertThat(newYearsEve.getMonth(), is(equalTo(Month.DECEMBER)));
         assertThat(newYearsEve.getDayOfMonth(), is(equalTo(31)));
