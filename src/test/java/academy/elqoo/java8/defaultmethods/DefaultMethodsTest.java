@@ -47,8 +47,8 @@ public class DefaultMethodsTest {
 
     @Test
     public void shouldReturnNameForRectangle(){
-        Shape shape = new Rectangle();
-        assertThat("Abstract Shape",equalTo(shape.getName()));
+        AbstractShape shape = new Rectangle();
+        assertThat("Hello",equalTo(shape.getName()));
     }
 
     @Test
