@@ -48,8 +48,9 @@ public class DateAndTimeTest {
 
     @Test
     public void shouldParseLocalDate(){
-        String newYearsEveAsString = null;
-        LocalDate newYearsEve = null; // parse the string to a date
+        String newYearsEveAsString = "2017-12-31";
+//        LocalDate newYearsEve = LocalDate.parse(newYearsEveAsString); // uses the default formatter: DateTimeFormatter.ISO_DATE
+        LocalDate newYearsEve = LocalDate.parse(newYearsEveAsString, DateTimeFormatter.ISO_DATE);
         assertThat(newYearsEve.getYear(), is(equalTo(2017)));
         assertThat(newYearsEve.getMonth(), is(equalTo(Month.DECEMBER)));
         assertThat(newYearsEve.getDayOfMonth(), is(equalTo(31)));
