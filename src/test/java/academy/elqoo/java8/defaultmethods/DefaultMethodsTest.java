@@ -42,7 +42,7 @@ public class DefaultMethodsTest {
     @Test
     public void shouldReturnNameForTriangle(){
         Shape shape = new Triangle();
-        assertThat("fill in right name here",equalTo(shape.getName()));
+        assertThat("Triangle",equalTo(shape.getName()));
     }
 
     @Test
