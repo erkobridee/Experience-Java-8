@@ -22,12 +22,11 @@ public class DefaultMethodsTest {
 
     @Test
     public void shouldMoveXposWith10(){
-
         Rectangle rectangle = new Rectangle();
         Triangle triangle = new Triangle();
-        List<AbstractShape> shapes = asList(rectangle, triangle);
+        List<Shape> shapes = asList(rectangle, triangle);
         // write a static method on shape that add 10 to each xPos of a shape
-        // Shape.moveXPosWith10(shapes);
+        Shape.moveXPosWith10(shapes);
         assertThat(10, equalTo(rectangle.getXPos()));
         assertThat(10, equalTo(triangle.getXPos()));
 
