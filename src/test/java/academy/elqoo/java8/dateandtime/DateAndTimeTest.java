@@ -122,7 +122,7 @@ public class DateAndTimeTest {
     @Test
     public void shouldUseWithMethodtoChangeDate() {
         LocalDate newYearsEve = DateTime8.createNewYearsEve2017();
-        LocalDate newYearsEve2018 = newYearsEve.plus(1, ChronoUnit.YEARS); // change the newYearsEve using the with method
+        LocalDate newYearsEve2018 = newYearsEve.withYear(2018); // change the newYearsEve using the with method
         LocalDate firstJanuary = newYearsEve2018.plus(1, ChronoUnit.DAYS);
         assertThat(2018, equalTo(newYearsEve2018.getYear()));
         assertThat(1, equalTo(firstJanuary.getDayOfMonth()));
