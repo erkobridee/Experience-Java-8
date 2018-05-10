@@ -11,9 +11,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.collection.IsIterableContainingInOrder.contains;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class StreamTest {
 
@@ -49,7 +47,8 @@ public class StreamTest {
     public void shouldReturnNumberOfUsersOlderThen25() {
         List<User> users = User.getUsersWithAge(18, 20, 21, 22, 23, 24, 25, 26);
         Integer count = Stream8.countUsersOlderThen25(users);
-        assertTrue(count == 1);
+//        assertTrue(count == 1);
+        assertEquals(count, (Integer) 1);
     }
 
     @Test
@@ -232,12 +231,13 @@ public class StreamTest {
         List<Integer> numbers = asList(1, 2, 3);
         IntStream intStream = numbers.stream().mapToInt(value -> value);
         Stream<Integer> boxedStream = Stream8.getBoxedStream(intStream);
-        assertTrue(boxedStream.count() == 3);
+//        assertTrue(boxedStream.count() == 3);
+        assertEquals(boxedStream.count(), 3);
     }
 
     @Test
     public void shouldBeEmptyStream(){
-        Stream<Integer> numberStream =null; //create empty stream
+        Stream<Integer> numberStream = Stream.empty(); //create empty stream
         assertNotNull(numberStream);
     }
 
@@ -250,7 +250,9 @@ public class StreamTest {
     @Test
     public void shouldGenerate10RandomNumbers(){
         List<Integer> randomNumbers = Stream8.generate10RandomNumbers();
-        assertTrue(randomNumbers.size()==10);
+//        randomNumbers.stream().forEach(System.out::println);
+//        assertTrue(randomNumbers.size()==10);
+        assertEquals(randomNumbers.size(), 10);
     }
 
     @Test
