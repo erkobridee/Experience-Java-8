@@ -1,6 +1,6 @@
 package academy.elqoo.java8.defaultmethods;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import java.lang.UnsupportedOperationException;
 
 import java.util.Collection;
 
@@ -24,7 +24,7 @@ public interface Shape {
     }
 
     default void doSomething(){
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 
     static void moveXPosWith10(Collection<Shape> shapes) {

@@ -1,13 +1,9 @@
 package academy.elqoo.java8.stream.sample;
 
-import java.util.List;
 import java.util.Spliterator;
 import java.util.function.Consumer;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
-
-import static java.util.stream.Collectors.toList;
 
 public class CharacterSpliterator implements Spliterator<Character> {
 

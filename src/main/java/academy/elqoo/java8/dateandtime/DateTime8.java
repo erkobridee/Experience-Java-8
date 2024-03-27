@@ -1,10 +1,7 @@
 package academy.elqoo.java8.dateandtime;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjusters;
 
 public class DateTime8 {
@@ -27,6 +24,7 @@ public class DateTime8 {
         while(friday.getDayOfMonth() != 13){
             friday = friday.with(TemporalAdjusters.next(DayOfWeek.FRIDAY));
         }
+
         return friday;
     }
 
