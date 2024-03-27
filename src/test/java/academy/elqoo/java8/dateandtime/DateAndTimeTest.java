@@ -59,7 +59,7 @@ public class DateAndTimeTest {
     @Test(expected = DateTimeParseException.class)
     public void shouldThrowParseException(){
         String newYearsEveAsString = "2017-12-31";
-        LocalDate newYearsEve = LocalDate.parse(newYearsEveAsString, DateTimeFormatter.ISO_TIME);
+        /*LocalDate newYearsEve = */ LocalDate.parse(newYearsEveAsString, DateTimeFormatter.ISO_TIME);
     }
 
     @Test
