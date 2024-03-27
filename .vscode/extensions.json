@@ -2,5 +2,7 @@
   "recommendations": [
     "ms-vscode-remote.remote-containers",
   ],
-  "unwantedRecommendations": []
+  "unwantedRecommendations": [
+    "vscjava.vscode-java-pack"
+  ]
 }
