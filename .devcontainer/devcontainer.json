@@ -27,7 +27,10 @@
         "ms-vscode.makefile-tools",
         "EditorConfig.EditorConfig",
         "redhat.fabric8-analytics"
-      ]
+      ],
+      "settings": {
+        "redhat.telemetry.enabled": true
+      }
     }
   },
 
