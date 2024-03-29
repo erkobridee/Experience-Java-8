@@ -28,6 +28,8 @@ Udemy course: [Become at ease with Java 8](https://www.udemy.com/become-at-ease-
 
   - [[GitHub] erkobridee/devcontainer-hello](https://github.com/erkobridee/devcontainer-hello)
 
+  - [Java Development Container Images | Microsoft Artifact Registry](https://mcr.microsoft.com/en-us/product/devcontainers/java/about)
+
 - [Java in Visual Studio Code](https://code.visualstudio.com/docs/languages/java)
 
   - [Getting Started with Java in VS Code | Visual Studio Code](https://code.visualstudio.com/docs/java/java-tutorial)
