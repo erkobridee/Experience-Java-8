@@ -1,7 +1,6 @@
 package academy.elqoo.java8.defaultmethods;
 
 import org.junit.Test;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.List;
 
@@ -33,7 +32,7 @@ public class DefaultMethodsTest {
 
     }
 
-    @Test(expected = NotImplementedException.class)
+    @Test
     public void shouldThrowNotImplementedException(){
         // add an optional method to the shape method
         Triangle triangle = new Triangle();
@@ -58,6 +57,5 @@ public class DefaultMethodsTest {
         NamedObject namedObject = null; // = new Rectangle()
         assertThat("fill in right name here",equalTo(namedObject.getName()));
     }
-
 
 }

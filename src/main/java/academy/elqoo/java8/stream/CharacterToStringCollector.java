@@ -1,7 +1,7 @@
 package academy.elqoo.java8.stream;
 
-import java.util.Collections;
-import java.util.EnumSet;
+// import java.util.Collections;
+// import java.util.EnumSet;
 import java.util.Set;
 import java.util.function.BiConsumer;
 import java.util.function.BinaryOperator;

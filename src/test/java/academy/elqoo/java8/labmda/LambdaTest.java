@@ -5,9 +5,9 @@ import academy.elqoo.java8.lambda.TransactionLambda;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.Comparator;
+// import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
+// import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.equalTo;
