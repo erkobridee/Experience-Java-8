@@ -26,7 +26,7 @@
         "vscjava.vscode-java-pack",
         "ms-vscode.makefile-tools",
         "EditorConfig.EditorConfig",
-        "redhat.fabric8-analytics",
+        "redhat.fabric8-analytics"
       ],
       "settings": {
         "redhat.telemetry.enabled": true
