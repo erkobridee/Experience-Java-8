@@ -3,7 +3,7 @@
 {
   "name": "Java",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/java:1-8-bullseye",
+  "image": "mcr.microsoft.com/devcontainers/java:8-bullseye",
 
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
@@ -26,7 +26,8 @@
         "vscjava.vscode-java-pack",
         "ms-vscode.makefile-tools",
         "EditorConfig.EditorConfig",
-        "redhat.fabric8-analytics"
+        "redhat.fabric8-analytics",
+        "phil294.git-log--graph"
       ],
       "settings": {
         "redhat.telemetry.enabled": true
